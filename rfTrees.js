@@ -52,11 +52,11 @@ var imgSVG = d3.select(".outcomeImage").append("svg")
 imgSVG.append("svg:image")
     .attr("xlink:href", function(predictedVal) {
         if(predictedVal == "Setosa") {
-            return '/img/setosa.jpg'
+            return './img/setosa.jpg'
         } else if (predictedVal == "Versicolor") {
-            return '/img/versicolor.jpg'
+            return './img/versicolor.jpg'
         } else {
-            return '/img/virginica.jpg'
+            return './img/virginica.jpg'
         }
 })
 
