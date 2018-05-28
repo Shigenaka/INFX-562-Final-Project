@@ -1,0 +1,56 @@
+.node circle {
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 3px;
+}
+  
+.node text {
+    font: 12px sans-serif;
+}
+  
+.link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 2px;
+}
+
+.rfTreeResults {
+    float: right;
+    width: 250px;
+    height: 300px;
+    margin: 15px;
+    border: solid black;
+}
+
+.rfTreeResults svg, h3 {
+    margin: 5px;
+}
+
+.selectedCircle {
+    outline: solid black;
+}
+
+.sliders {
+    float: left;
+}
+
+.outcomeImage {
+    float: right;
+    border: solid black;
+    width: 250px;
+    height: 300px;
+    margin: 15px;
+}
+
+.outcomeImage svg, h3, p {
+    margin: 5px;
+}
+
+.rects {
+    display: inline-block;
+}
+
+.circles {
+    width: 100px;
+    display: inline-block;
+}
