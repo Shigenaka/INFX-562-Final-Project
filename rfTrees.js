@@ -46,8 +46,8 @@ console.log(allTrees);
 d3.select(".outcomeImage").append("p").text("Iris " + predictedVal);
 
 var imgSVG = d3.select(".outcomeImage").append("svg")
-    .attr("height", 225)
-    .attr("width", 225);
+    .attr("height", 240)
+    .attr("width", 240);
 
 imgSVG.append("svg:image")
     .attr("xlink:href", function() {
