@@ -1,10 +1,10 @@
 selectedTree = []
 
 var dataObject = {
-    "Sepal Length" : 5.7,
-    "Sepal Width" : 2.8,
-    "Petal Length" : 4.5,
-    "Petal Width" : 1.3
+    "Sepal Length" : 5.0,
+    "Sepal Width" : 3.3,
+    "Petal Length" : 1.4,
+    "Petal Width" : 0.2
 }
 
 //var varOutputs = [];
@@ -43,14 +43,15 @@ console.log(counts);
 console.log(predictedVal);
 console.log(allTrees);
 
-d3.select(".outcomeImage").append("p").text("Iris" + predictedVal);
+d3.select(".outcomeImage").append("p").text("Iris " + predictedVal);
 
 var imgSVG = d3.select(".outcomeImage").append("svg")
     .attr("height", 225)
     .attr("width", 225);
 
 imgSVG.append("svg:image")
-    .attr("xlink:href", function(predictedVal) {
+    .attr("xlink:href", function() {
+        console.log(predictedVal);
         if(predictedVal == "Setosa") {
             return './img/setosa.jpg'
         } else if (predictedVal == "Versicolor") {
@@ -58,7 +59,7 @@ imgSVG.append("svg:image")
         } else {
             return './img/virginica.jpg'
         }
-})
+    })
 
 
 //var idxNums = Array.apply(null, {length: allTrees.length}).map(Number.call, Number);

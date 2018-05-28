@@ -32,6 +32,9 @@
 
 .sliders {
     float: left;
+    height: 300px;
+    border: solid black;
+    margin: 15px;
 }
 
 .outcomeImage {
@@ -44,6 +47,17 @@
 
 .outcomeImage svg, h3, p {
     margin: 5px;
+}
+
+.outcomeImage p {
+    color: blue;
+    text-align: center;
+    font-weight: bold;
+}
+
+.outcomeImage image {
+    width : 100%;
+    height: 100%
 }
 
 .rects {
