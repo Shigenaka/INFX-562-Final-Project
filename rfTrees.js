@@ -1,10 +1,10 @@
 selectedTree = []
 
 var dataObject = {
-    "Sepal Length" : 5.0,
-    "Sepal Width" : 3.3,
-    "Petal Length" : 1.4,
-    "Petal Width" : 0.2
+    "Sepal Length" : 6.2,
+    "Sepal Width" : 2.2,
+    "Petal Length" : 4.5,
+    "Petal Width" : 1.5
 }
 
 //var varOutputs = [];
