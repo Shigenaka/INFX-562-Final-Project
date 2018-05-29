@@ -78,9 +78,9 @@ var circlesEnter = circleSVG.selectAll("circle")
 circlesEnter
     .attr("cy", function(d, i) {
         //console.log(Math.floor(i / 4));
-        return 60 + (Math.floor(i / 4) * 30);
+        return 30 + (Math.floor(i / 4) * 30);
     })
-    .attr("cx", function(d, i) { return (i % 4) * 25 + 10; })
+    .attr("cx", function(d, i) { return (i % 4) * 25 + 15; })
     .attr("r", 10)
     .style("fill", function(d) {
         if(d.outcome == "Setosa") {
