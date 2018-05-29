@@ -1,5 +1,26 @@
 var treeObj = function(selectedTree) {
 
+    console.log("rfTreeObj selected tree: ", selectedTree);
+    var currSelectedTree = selectedTree;
+
+    var trackTraversal = function(data, tree) {
+        if(!tree.children) {
+            var outputVal = tree.class;
+            tree.traversed = true;
+            //console.log(outputVal);
+            return outputVal;
+        } else if (data[tree.variable] <= tree.splitVal) {
+            tree.traversed = true;
+            return trackTraversal(data, tree.children[0]);
+        } else {
+            tree.traversed = true;
+            return trackTraversal(data, tree.children[1]);
+        }
+    }
+
+    trackTraversal(dataObject, currSelectedTree);
+    console.log(currSelectedTree);
+
     var treeData = selectedTree
 
     //console.log(allTrees)
@@ -69,16 +90,31 @@ var treeObj = function(selectedTree) {
     var nodeEnter = node.enter().append('g')
         .attr('class', 'node')
         .attr("transform", function(d) {
+            console.log(d);
             return "translate(" + source.y0 + "," + source.x0 + ")";
         })
         .on('click', click);
 
     // Add Circle for the nodes
     nodeEnter.append('circle')
-        .attr('class', 'node')
+        //.attr('class', 'node')
+        .attr('class',function(d) {
+            if (d.data.traversed == true) {
+                console.log("traversed",d.data.traversed);
+                return "nodeTraversed node";
+            } else {
+                return "nodeNotTraversed node";
+            }
+        })
         .attr('r', 1e-6)
         .style("fill", function(d) {
-            return d._children ? "lightsteelblue" : "#fff";
+            if(d.data.traversed == true) {
+                console.log("here yes",d.data.traversed);
+                return d._children ? "#E94B3C" : "#fff";
+            } else {
+                console.log("here no",d.data.traversed);
+                return d._children ? "lightsteelblue" : "#fff";
+            }
         });
 
     // Add labels for the nodes
@@ -126,7 +162,13 @@ var treeObj = function(selectedTree) {
     nodeUpdate.select('circle.node')
         .attr('r', 10)
         .style("fill", function(d) {
-            return d._children ? "lightsteelblue" : "#fff";
+            if(d.data.traversed == true) {
+                console.log("here yes",d.data.traversed);
+                return d._children ? "#E94B3C" : "#fff";
+            } else {
+                console.log("here no",d.data.traversed);
+                return d._children ? "lightsteelblue" : "#fff";
+            }
         })
         .attr('cursor', 'pointer');
 

@@ -68,3 +68,7 @@
     width: 100px;
     display: inline-block;
 }
+
+.nodeTraversed {
+    stroke: #E94B3C !important;
+}

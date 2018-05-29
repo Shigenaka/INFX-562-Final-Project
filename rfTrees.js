@@ -14,7 +14,7 @@ var counts = {
     "Virginica": 0
 };
 
-console.log(typeof dataObject);
+//console.log(typeof dataObject);
 
 var traverseTree = function(data, tree) {
     if(!tree.children) {
@@ -97,7 +97,7 @@ circlesEnter
         allCircles.classed("selectedCircle", false);
         thisCircle.classed("selectedCircle", true);
         selectedTree = d[0];
-        console.log(selectedTree);
+        //console.log(selectedTree);
         treeObj(selectedTree);
     });
 
