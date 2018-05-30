@@ -18,6 +18,7 @@ var treeObj = function(selectedTree) {
         }
     }
 
+    console.log("curr data object", dataObject);
     trackTraversal(dataObject, currSelectedTree);
     console.log(currSelectedTree);
 

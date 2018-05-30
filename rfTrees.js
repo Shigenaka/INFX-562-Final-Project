@@ -125,7 +125,7 @@ var createDataObj = function(sepalL, sepalW, petalL, petalW) {
     console.log(petalL);
     console.log(petalW);
 
-    var dataObject = {
+    dataObject = {
         "Sepal Length" : sepalL,
         "Sepal Width" : sepalW,
         "Petal Length" : petalL,
