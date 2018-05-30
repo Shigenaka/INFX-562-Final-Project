@@ -46,7 +46,7 @@ var buildComponents = function(dataObject) {
     d3.select(".outcomeImage").append("p").text("Iris " + predictedVal);
 
     var imgSVG = d3.select(".outcomeImage").append("svg")
-        .attr("height", 240)
+        .attr("height", 200)
         .attr("width", 240);
 
     imgSVG.append("svg:image")
