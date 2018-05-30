@@ -1,6 +1,6 @@
 .node circle {
     fill: #fff;
-    stroke: steelblue;
+    stroke: gray;
     stroke-width: 3px;
 }
   
@@ -62,7 +62,8 @@
 }
 
 .rects {
-    display: inline-block;
+    float: right !important;
+    margin-right: 15px;
 }
 
 .circles {
@@ -71,5 +72,33 @@
 }
 
 .nodeTraversed {
-    stroke: #E94B3C !important;
+    stroke: steelblue !important;
+}
+
+.setosaG, .versicolorG, .virginicaG {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    color: white;
+}
+
+.setosaG {
+    background-color: #1b9e77;
+}
+
+.versicolorG {
+    background-color: #d95f02;
+}
+
+.virginicaG {
+    background-color: #7570b3;
+}
+
+text, p, h4, h3 {
+    font-family: Verdana, Arial, sans-serif !important;
+}
+
+.rects h4 {
+    font-size: 12px;
+    padding-top: 10px;
 }

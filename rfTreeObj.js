@@ -114,10 +114,10 @@ var treeObj = function(selectedTree) {
         .style("fill", function(d) {
             if(d.data.traversed == true) {
                 console.log("here yes",d.data.traversed);
-                return d._children ? "#E94B3C" : "#fff";
+                return d._children ? "lightsteelblue" : "#fff";
             } else {
                 console.log("here no",d.data.traversed);
-                return d._children ? "lightsteelblue" : "#fff";
+                return d._children ? "grey" : "#fff";
             }
         });
 
@@ -168,10 +168,10 @@ var treeObj = function(selectedTree) {
         .style("fill", function(d) {
             if(d.data.traversed == true) {
                 console.log("here yes",d.data.traversed);
-                return d._children ? "#E94B3C" : "#fff";
+                return d._children ? "lightsteelblue" : "#fff";
             } else {
                 console.log("here no",d.data.traversed);
-                return d._children ? "lightsteelblue" : "#fff";
+                return d._children ? "gray" : "#fff";
             }
         })
         .attr('cursor', 'pointer');
