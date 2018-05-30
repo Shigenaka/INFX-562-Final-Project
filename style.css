@@ -27,7 +27,7 @@
 }
 
 .selectedCircle {
-    outline: solid black;
+    outline: solid #5f5f5f;
 }
 
 .sliders {

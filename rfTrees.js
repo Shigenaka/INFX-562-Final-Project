@@ -59,7 +59,7 @@ imgSVG.append("svg:image")
         } else {
             return './img/virginica.jpg'
         }
-    })
+    });
 
 
 //var idxNums = Array.apply(null, {length: allTrees.length}).map(Number.call, Number);
@@ -68,7 +68,7 @@ imgSVG.append("svg:image")
 var circleSVG = d3.select(".circles")
     .append("svg")
     .attr("height", 165)
-    .attr("width", 100)
+    .attr("width", 110)
 
 var circlesEnter = circleSVG.selectAll("circle")
     .data(allTrees)
