@@ -32,7 +32,7 @@ var treeObj = function(currTree) {
     // Set the dimensions and margins of the diagram
     var margin = {top: 20, right: 150, bottom: 30, left: 200},
         width = 1060 - margin.left - margin.right,
-        height = 350 - margin.top - margin.bottom;
+        height = 300 - margin.top - margin.bottom;
     
     //removes existing svgs
     d3.select(".tree").select("svg").remove();
